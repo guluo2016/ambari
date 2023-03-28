@@ -52,13 +52,6 @@
               </auto-deploy>
             </dependency>
           </dependencies>
-
-          <configuration-dependencies>
-            <config-type>solr-env</config-type>
-            <config-type>solr-xml</config-type>
-            <config-type>solr-log4j</config-type>
-            <config-type>solr-security-json</config-type>
-          </configuration-dependencies>
         </component>
       </components>
 
@@ -78,6 +71,13 @@
         <scriptType>PYTHON</scriptType>
         <timeout>300</timeout>
       </commandScript>
+
+      <configuration-dependencies>
+        <config-type>solr-env</config-type>
+        <config-type>solr-xml</config-type>
+        <config-type>solr-log4j</config-type>
+        <config-type>solr-security-json</config-type>
+      </configuration-dependencies>
 
       <requiredServices>
         <service>ZOOKEEPER</service>
