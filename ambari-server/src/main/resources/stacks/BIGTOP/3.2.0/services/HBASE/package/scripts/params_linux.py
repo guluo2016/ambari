@@ -388,6 +388,9 @@ hdfs_principal_name = config["configurations"]["hadoop-env"]["hdfs_principal_nam
 hdfs_site = config["configurations"]["hdfs-site"]
 default_fs = config["configurations"]["core-site"]["fs.defaultFS"]
 
+# HBase Master Web UI
+hbase_master_info_port = config["configurations"]["hadoop-env"]["hbase.master.info.port"]
+
 dfs_type = default("/clusterLevelParams/dfs_type", "")
 
 import functools

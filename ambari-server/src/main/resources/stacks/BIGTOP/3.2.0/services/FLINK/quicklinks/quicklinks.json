@@ -15,9 +15,9 @@
         "requires_user_name": "false",
         "url": "%@://%@:%@",
         "port":{
-          "http_property": "historyserver.web.port",
+          "http_property": "historyserver_web_port",
           "http_default_port": "8082",
-          "https_property": "historyserver.web.port",
+          "https_property": "historyserver_web_port",
           "https_default_port": "8082",
           "regex": "^(\\d+)$",
           "site": "flink-conf"

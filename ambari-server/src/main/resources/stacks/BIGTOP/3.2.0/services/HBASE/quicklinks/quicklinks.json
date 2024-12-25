@@ -15,9 +15,9 @@
         "url":"%@://%@:%@/master-status",
         "requires_user_name": "false",
         "port":{
-          "http_property": "hbase.master.info.port",
+          "http_property": "hbase_master_info_port",
           "http_default_port": "60010",
-          "https_property": "hbase.master.info.port",
+          "https_property": "hbase_master_info_port",
           "https_default_port": "60443",
           "regex": "",
           "site": "hbase-site"
@@ -30,9 +30,9 @@
         "url":"%@://%@:%@/logs",
         "requires_user_name": "false",
         "port":{
-          "http_property": "hbase.master.info.port",
+          "http_property": "hbase_master_info_port",
           "http_default_port": "60010",
-          "https_property": "hbase.master.info.port",
+          "https_property": "hbase_master_info_port",
           "https_default_port": "60443",
           "regex": "",
           "site": "hbase-site"
@@ -45,9 +45,9 @@
         "url":"%@://%@:%@/zk.jsp",
         "requires_user_name": "false",
         "port":{
-          "http_property": "hbase.master.info.port",
+          "http_property": "hbase_master_info_port",
           "http_default_port": "60010",
-          "https_property": "hbase.master.info.port",
+          "https_property": "hbase_master_info_port",
           "https_default_port": "60443",
           "regex": "",
           "site": "hbase-site"
@@ -60,9 +60,9 @@
         "url":"%@://%@:%@/jmx",
         "requires_user_name": "false",
         "port":{
-          "http_property": "hbase.master.info.port",
+          "http_property": "hbase_master_info_port",
           "http_default_port": "60010",
-          "https_property": "hbase.master.info.port",
+          "https_property": "hbase_master_info_port",
           "https_default_port": "60443",
           "regex": "",
           "site": "hbase-site"
@@ -75,9 +75,9 @@
         "url":"%@://%@:%@/dump",
         "requires_user_name": "false",
         "port":{
-          "http_property": "hbase.master.info.port",
+          "http_property": "hbase_master_info_port",
           "http_default_port": "60010",
-          "https_property": "hbase.master.info.port",
+          "https_property": "hbase_master_info_port",
           "https_default_port": "60443",
           "regex": "",
           "site": "hbase-site"
@@ -90,9 +90,9 @@
         "url":"%@://%@:%@/stacks",
         "requires_user_name": "false",
         "port":{
-          "http_property": "hbase.master.info.port",
+          "http_property": "hbase_master_info_port",
           "http_default_port": "60010",
-          "https_property": "hbase.master.info.port",
+          "https_property": "hbase_master_info_port",
           "https_default_port": "60443",
           "regex": "",
           "site": "hbase-site"
