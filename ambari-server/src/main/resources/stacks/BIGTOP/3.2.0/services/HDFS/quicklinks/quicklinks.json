@@ -22,7 +22,7 @@
         "url":"%@://%@:%@",
         "requires_user_name": "false",
         "port":{
-          "http_property": "dfs.namenode.http-address",
+          "http_property": "dfs_namenode_http_address",
           "http_default_port": "50070",
           "https_property": "dfs.namenode.https-address",
           "https_default_port": "50470",
@@ -37,7 +37,7 @@
         "url":"%@://%@:%@/logs",
         "requires_user_name": "false",
         "port":{
-          "http_property": "dfs.namenode.http-address",
+          "http_property": "dfs_namenode_http_address",
           "http_default_port": "50070",
           "https_property": "dfs.namenode.https-address",
           "https_default_port": "50470",
@@ -52,7 +52,7 @@
         "url":"%@://%@:%@/jmx",
         "requires_user_name": "false",
         "port":{
-          "http_property": "dfs.namenode.http-address",
+          "http_property": "dfs_namenode_http_address",
           "http_default_port": "50070",
           "https_property": "dfs.namenode.https-address",
           "https_default_port": "50470",
@@ -67,7 +67,7 @@
         "url":"%@://%@:%@/stacks",
         "requires_user_name": "false",
         "port":{
-          "http_property": "dfs.namenode.http-address",
+          "http_property": "dfs_namenode_http_address",
           "http_default_port": "50070",
           "https_property": "dfs.namenode.https-address",
           "https_default_port": "50470",

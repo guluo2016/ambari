@@ -60,6 +60,9 @@ dfs_ha_namenode_ids = default(
   format("/configurations/hdfs-site/dfs.ha.namenodes.{dfs_ha_nameservices}"), None
 )
 
+# Namenode http address
+dfs_namenode_http_address = config["configurations"]["hdfs-site"]["dfs.namenode.http-address"]
+
 namenode_id = None
 namenode_rpc = None
 hostname = config["agentLevelParams"]["hostname"]

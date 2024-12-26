@@ -524,6 +524,9 @@ default_fs = config["configurations"]["core-site"]["fs.defaultFS"]
 
 dfs_type = default("/clusterLevelParams/dfs_type", "")
 
+# Namenode http address
+dfs_namenode_http_address = config["configurations"]["hdfs-site"]["dfs.namenode.http-address"]
+
 import functools
 
 # create partial functions with common arguments for every HdfsResource call
