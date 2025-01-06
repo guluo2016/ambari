@@ -28,11 +28,7 @@ Apache Ambari is a tool for provisioning, managing, and monitoring Apache Hadoop
 
 ## Getting Started
 
-https://cwiki.apache.org/confluence/display/AMBARI/Quick+Start+Guide
-
-## Built With
-
-https://cwiki.apache.org/confluence/display/AMBARI/Technology+Stack
+https://cwiki.apache.org/confluence/display/AMBARI/Installation+Guide+for+Ambari+2.7.9
 
 ## Contributing
 
