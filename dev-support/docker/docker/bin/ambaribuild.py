@@ -17,11 +17,13 @@ import json
 import datetime
 from optparse import OptionParser
 
-SKIP_TEST = "-DskipTests"
+NEW_VERSION='-DnewVersion=2.7.9.0.0'
+SKIP_TEST = '-DskipTests'
+HASH = '-DbuildNumber=da8f1b9b5a799bfa8e2d8aa9ab31d6d5a1cc31a0'
 AMBARI_AUTH_HEADERS = (
   "--header 'Authorization:Basic YWRtaW46YWRtaW4=' --header 'X-Requested-By: PIVOTAL'"
 )
-AMBARI_BUILD_DOCKER_ROOT = "/tmp/ambari-build-docker"
+AMBARI_BUILD_DOCKER_ROOT = '/tmp/ambari-build-docker'
 NO_EXIT_SLEEP_TIME = 60
 RETRY_MAX = 20
 
@@ -33,6 +35,28 @@ def git_deep_cleaning():
 
 def ambariUnitTest():
   proc = subprocess.Popen("mvn -fae clean install", shell=True, cwd="/tmp/ambari")
+  return proc.wait()
+
+def buildAmbariOnDebian():
+  proc = subprocess.Popen('mvn -B clean install jdeb:jdeb'
+    + ' '
+    + NEW_VERSION
+    + ' '
+    + HASH
+    + ' '
+    + SKIP_TEST
+    + ' -Dpython.ver="python >= 2.6"')
+  return proc.wait()
+
+def buildAmbariOnRHEL():
+  proc = subprocess.Popen('mvn B clean install rpm:rpm'
+    + ' '
+    + NEW_VERSION
+    + ' '
+    + HASH
+    + ' '
+    + SKIP_TEST
+    + ' -Dpython.ver="python >= 2.6"')
   return proc.wait()
 
 
