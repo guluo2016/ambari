@@ -1,0 +1,10 @@
+{
+  "name": "RockyLinux_Lp",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  },
+  "remoteUser": "root"
+}
