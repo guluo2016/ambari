@@ -16,7 +16,7 @@
 # limitations under the License.
 
 echo -e "\033[32mStarting container ambari-rpm-build\033[0m"
-if [[ -z $(docker ps -a --format "table {{.Names}}" | grep "ambari-rpm-build") ]];then
+if [[ -z $(docker ps -a --format "table {{.Names}}" | grep "ambari-rpm-build") ]]; then
   docker run -it -d --name ambari-rpm-build --privileged=true -e "container=docker" \
     -v /sys/fs/cgroup:/sys/fs/cgroup:ro -v $PWD/../../../:/opt/ambari/ \
     -w /opt/ambari \
@@ -36,7 +36,7 @@ echo -e "\033[32mCreating container ambari-server\033[0m"
 docker run -d -p 3306:3306 -p 5005:5005 -p 8080:8080 --name ambari-server --hostname ambari-server --network ambari --privileged -e "container=docker" -v /sys/fs/cgroup:/sys/fs/cgroup:ro ambari/develop:trunk-centos-7 /usr/sbin/init
 docker cp ../../../ambari-server/target/rpm/ambari-server/RPMS/x86_64/ambari-server*.rpm ambari-server:/root/ambari-server.rpm
 docker cp ../../../ambari-agent/target/rpm/ambari-agent/RPMS/x86_64/ambari-agent*.rpm ambari-server:/root/ambari-agent.rpm
-SERVER_PUB_KEY=`docker exec ambari-server /bin/cat /root/.ssh/id_rsa.pub`
+SERVER_PUB_KEY=$(docker exec ambari-server /bin/cat /root/.ssh/id_rsa.pub)
 docker exec ambari-server bash -c "yum -y install /root/ambari-server.rpm"
 docker exec ambari-server bash -c "yum -y install /root/ambari-agent.rpm"
 docker exec ambari-server bash -c "echo '$SERVER_PUB_KEY' > /root/.ssh/authorized_keys"
@@ -81,16 +81,15 @@ docker exec ambari-agent-02 /bin/systemctl enable sshd
 docker exec ambari-agent-02 /bin/systemctl start sshd
 
 echo -e "\033[32mConfiguring hosts file\033[0m"
-AMBARI_SERVER_IP=`docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' ambari-server`
-AMBARI_AGENT_01_IP=`docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' ambari-agent-01`
-AMBARI_AGENT_02_IP=`docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' ambari-agent-02`
+AMBARI_SERVER_IP=$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' ambari-server)
+AMBARI_AGENT_01_IP=$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' ambari-agent-01)
+AMBARI_AGENT_02_IP=$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' ambari-agent-02)
 docker exec ambari-server bash -c "echo '$AMBARI_AGENT_01_IP      ambari-agent-01' >> /etc/hosts"
 docker exec ambari-server bash -c "echo '$AMBARI_AGENT_02_IP      ambari-agent-02' >> /etc/hosts"
 docker exec ambari-agent-01 bash -c "echo '$AMBARI_SERVER_IP      ambari-server' >> /etc/hosts"
 docker exec ambari-agent-01 bash -c "echo '$AMBARI_AGENT_02_IP      ambari-agent-02' >> /etc/hosts"
 docker exec ambari-agent-02 bash -c "echo '$AMBARI_SERVER_IP      ambari-server' >> /etc/hosts"
 docker exec ambari-agent-02 bash -c "echo '$AMBARI_AGENT_01_IP      ambari-agent-01' >> /etc/hosts"
-
 
 echo -e "\033[32mConfiguring Kerberos\033[0m"
 docker cp ./krb5.conf ambari-server:/etc/krb5.conf

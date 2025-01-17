@@ -13,16 +13,12 @@
 FROM rockylinux:8
 
 RUN curl https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_linux-x64_bin.tar.gz -o /root/openjdk-17.0.2_linux-x64_bin.tar.gz && \
-  curl https://archive.apache.org/dist/maven/maven-3/3.9.0/binaries/apache-maven-3.9.0-bin.tar.gz -o /root/apache-maven-3.9.0-bin.tar.gz && \
   tar -zxf /root/openjdk-17.0.2_linux-x64_bin.tar.gz -C /usr/local/ && \
-  tar -zxf /root/apache-maven-3.9.0-bin.tar.gz -C /usr/local && \
-  rm -rf /root/openjdk-17.0.2_linux-x64_bin.tar.gz /opt/apache-maven-3.9.0-bin.tar.gz && \
-  yum install git rpm-build python3 -y && \
-  mkdir /build && \
-  git clone -b --depth 1 trunk https://github.com/apache/ambari.git
+  rm -rf /root/openjdk-17.0.2_linux-x64_bin.tar.gz && \
+  yum install git rpm-build -y
 ENV JAVA_HOME /usr/local/jdk-17.0.2
 ENV PATH $PATH:$JAVA_HOME/bin
-ENV MAVEN_HOME /usr/local/apache-maven-3.9.0/
-ENV PATH $PATH:$MAVEN_HOME/bin
 
-WORKDIR /build/ambari
+# 安装ambar-server
+
+# setup
