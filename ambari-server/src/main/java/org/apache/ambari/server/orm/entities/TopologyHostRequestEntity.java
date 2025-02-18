@@ -19,6 +19,8 @@ package org.apache.ambari.server.orm.entities;
 
 import java.util.Collection;
 
+import org.apache.ambari.server.actionmanager.HostRoleStatus;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -31,8 +33,6 @@ import jakarta.persistence.NamedQueries;
 import jakarta.persistence.NamedQuery;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-
-import org.apache.ambari.server.actionmanager.HostRoleStatus;
 
 @Entity
 @Table(name = "topology_host_request")

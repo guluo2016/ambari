@@ -22,6 +22,10 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Objects;
 
+import org.apache.ambari.server.state.RepositoryVersionState;
+import org.apache.ambari.server.state.State;
+import org.apache.commons.lang.builder.EqualsBuilder;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -40,10 +44,6 @@ import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.TableGenerator;
 import jakarta.persistence.UniqueConstraint;
-
-import org.apache.ambari.server.state.RepositoryVersionState;
-import org.apache.ambari.server.state.State;
-import org.apache.commons.lang.builder.EqualsBuilder;
 
 @Entity
 @Table(

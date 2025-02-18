@@ -20,6 +20,12 @@ package org.apache.ambari.server.orm.entities;
 
 import java.util.Collection;
 
+import org.apache.ambari.server.view.DefaultMasker;
+import org.apache.ambari.view.MaskException;
+import org.apache.ambari.view.Masker;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -31,12 +37,6 @@ import jakarta.persistence.NamedQuery;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.persistence.TableGenerator;
-
-import org.apache.ambari.server.view.DefaultMasker;
-import org.apache.ambari.view.MaskException;
-import org.apache.ambari.view.Masker;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * Remote Ambari Managed Cluster

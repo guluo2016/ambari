@@ -20,6 +20,10 @@ package org.apache.ambari.server.orm.entities;
 
 import java.util.Objects;
 
+import org.apache.ambari.server.state.MaintenanceState;
+import org.apache.ambari.server.state.State;
+import org.apache.commons.lang.builder.EqualsBuilder;
+
 import jakarta.persistence.Basic;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -29,10 +33,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
-
-import org.apache.ambari.server.state.MaintenanceState;
-import org.apache.ambari.server.state.State;
-import org.apache.commons.lang.builder.EqualsBuilder;
 
 @jakarta.persistence.IdClass(ServiceDesiredStateEntityPK.class)
 @jakarta.persistence.Table(name = "servicedesiredstate")

@@ -20,6 +20,8 @@ package org.apache.ambari.server.orm.entities;
 
 import java.util.Objects;
 
+import org.apache.ambari.server.state.RepositoryVersionState;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -34,8 +36,6 @@ import jakarta.persistence.NamedQuery;
 import jakarta.persistence.Table;
 import jakarta.persistence.TableGenerator;
 import jakarta.persistence.UniqueConstraint;
-
-import org.apache.ambari.server.state.RepositoryVersionState;
 
 @Entity
 @Table(

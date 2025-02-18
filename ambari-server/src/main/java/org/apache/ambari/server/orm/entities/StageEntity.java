@@ -22,6 +22,9 @@ import static org.apache.commons.lang.StringUtils.defaultString;
 
 import java.util.Collection;
 
+import org.apache.ambari.server.actionmanager.CommandExecutionType;
+import org.apache.ambari.server.actionmanager.HostRoleStatus;
+
 import jakarta.persistence.Basic;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -37,9 +40,6 @@ import jakarta.persistence.NamedQueries;
 import jakarta.persistence.NamedQuery;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-
-import org.apache.ambari.server.actionmanager.CommandExecutionType;
-import org.apache.ambari.server.actionmanager.HostRoleStatus;
 
 @Entity
 @Table(name = "stage")

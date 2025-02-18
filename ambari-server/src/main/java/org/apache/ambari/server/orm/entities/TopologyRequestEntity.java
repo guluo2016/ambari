@@ -19,6 +19,8 @@ package org.apache.ambari.server.orm.entities;
 
 import java.util.Collection;
 
+import org.apache.ambari.server.controller.internal.ProvisionAction;
+
 import jakarta.persistence.Basic;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -36,8 +38,6 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.TableGenerator;
-
-import org.apache.ambari.server.controller.internal.ProvisionAction;
 
 @Entity
 @Table(name = "topology_request")

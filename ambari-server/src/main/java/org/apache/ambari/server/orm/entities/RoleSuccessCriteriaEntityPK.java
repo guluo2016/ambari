@@ -20,10 +20,10 @@ package org.apache.ambari.server.orm.entities;
 
 import java.io.Serializable;
 
+import org.apache.ambari.server.Role;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Id;
-
-import org.apache.ambari.server.Role;
 
 @SuppressWarnings("serial")
 public class RoleSuccessCriteriaEntityPK implements Serializable {

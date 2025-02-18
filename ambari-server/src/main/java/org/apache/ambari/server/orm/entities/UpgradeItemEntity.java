@@ -17,6 +17,9 @@
  */
 package org.apache.ambari.server.orm.entities;
 
+import org.apache.ambari.server.actionmanager.Stage;
+import org.apache.ambari.server.state.UpgradeState;
+
 import jakarta.persistence.Basic;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -31,9 +34,6 @@ import jakarta.persistence.NamedQueries;
 import jakarta.persistence.NamedQuery;
 import jakarta.persistence.Table;
 import jakarta.persistence.TableGenerator;
-
-import org.apache.ambari.server.actionmanager.Stage;
-import org.apache.ambari.server.state.UpgradeState;
 
 /**
  * Models a single upgrade item which is directly associated with {@link Stage}.

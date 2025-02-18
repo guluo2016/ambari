@@ -23,10 +23,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.ambari.server.controller.internal.StageResourceProvider;
+
 import jakarta.persistence.metamodel.SingularAttribute;
 import jakarta.persistence.metamodel.StaticMetamodel;
-
-import org.apache.ambari.server.controller.internal.StageResourceProvider;
 
 /**
  * The {@link StageEntity_} is a strongly typed metamodel for creating

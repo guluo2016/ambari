@@ -24,6 +24,17 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import org.apache.ambari.server.configuration.Configuration;
+import org.apache.ambari.server.controller.spi.Resource;
+import org.apache.ambari.server.controller.spi.ResourceProvider;
+import org.apache.ambari.server.view.ViewSubResourceDefinition;
+import org.apache.ambari.server.view.configuration.ParameterConfig;
+import org.apache.ambari.server.view.configuration.ResourceConfig;
+import org.apache.ambari.server.view.configuration.ViewConfig;
+import org.apache.ambari.view.View;
+import org.apache.ambari.view.ViewDefinition;
+import org.apache.ambari.view.validation.Validator;
+
 import jakarta.persistence.Basic;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -36,17 +47,6 @@ import jakarta.persistence.NamedQuery;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.persistence.Transient;
-
-import org.apache.ambari.server.configuration.Configuration;
-import org.apache.ambari.server.controller.spi.Resource;
-import org.apache.ambari.server.controller.spi.ResourceProvider;
-import org.apache.ambari.server.view.ViewSubResourceDefinition;
-import org.apache.ambari.server.view.configuration.ParameterConfig;
-import org.apache.ambari.server.view.configuration.ResourceConfig;
-import org.apache.ambari.server.view.configuration.ViewConfig;
-import org.apache.ambari.view.View;
-import org.apache.ambari.view.ViewDefinition;
-import org.apache.ambari.view.validation.Validator;
 
 /**
  * Entity representing a View.

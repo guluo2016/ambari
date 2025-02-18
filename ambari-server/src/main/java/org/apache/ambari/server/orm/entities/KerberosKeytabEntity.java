@@ -21,6 +21,8 @@ package org.apache.ambari.server.orm.entities;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import org.apache.ambari.server.serveraction.kerberos.stageutils.ResolvedKerberosKeytab;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -31,8 +33,6 @@ import jakarta.persistence.NamedQuery;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.QueryHint;
 import jakarta.persistence.Table;
-
-import org.apache.ambari.server.serveraction.kerberos.stageutils.ResolvedKerberosKeytab;
 
 @Entity
 @Table(name = "kerberos_keytab")

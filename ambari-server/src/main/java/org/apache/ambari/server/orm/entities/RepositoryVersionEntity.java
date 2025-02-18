@@ -21,6 +21,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+import org.apache.ambari.annotations.Experimental;
+import org.apache.ambari.annotations.ExperimentalFeature;
+import org.apache.ambari.server.StaticallyInject;
+import org.apache.ambari.server.state.StackId;
+import org.apache.ambari.server.state.repository.VersionDefinitionXml;
+import org.apache.ambari.spi.RepositoryType;
+import org.apache.ambari.spi.RepositoryVersion;
+import org.apache.commons.lang.StringUtils;
+
+import com.google.common.base.MoreObjects;
+import com.google.common.base.Objects;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -43,18 +55,6 @@ import jakarta.persistence.Table;
 import jakarta.persistence.TableGenerator;
 import jakarta.persistence.Transient;
 import jakarta.persistence.UniqueConstraint;
-
-import org.apache.ambari.annotations.Experimental;
-import org.apache.ambari.annotations.ExperimentalFeature;
-import org.apache.ambari.server.StaticallyInject;
-import org.apache.ambari.server.state.StackId;
-import org.apache.ambari.server.state.repository.VersionDefinitionXml;
-import org.apache.ambari.spi.RepositoryType;
-import org.apache.ambari.spi.RepositoryVersion;
-import org.apache.commons.lang.StringUtils;
-
-import com.google.common.base.MoreObjects;
-import com.google.common.base.Objects;
 
 @Entity
 @Table(name = "repo_version", uniqueConstraints = {

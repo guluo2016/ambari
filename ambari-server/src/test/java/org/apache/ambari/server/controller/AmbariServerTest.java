@@ -38,11 +38,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.EnumSet;
 
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.TypedQuery;
-import javax.servlet.DispatcherType;
-import javax.servlet.SessionCookieConfig;
-
 import org.apache.ambari.server.AmbariException;
 import org.apache.ambari.server.H2DatabaseCleaner;
 import org.apache.ambari.server.api.services.AmbariMetaInfo;
@@ -74,6 +69,11 @@ import org.junit.Test;
 import com.google.inject.AbstractModule;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
+
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.TypedQuery;
+import javax.servlet.DispatcherType;
+import javax.servlet.SessionCookieConfig;
 
 public class AmbariServerTest {
 

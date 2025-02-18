@@ -23,16 +23,16 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
+import org.apache.ambari.server.controller.spi.SortRequest;
+import org.apache.ambari.server.controller.spi.SortRequestProperty;
+import org.apache.commons.lang.ObjectUtils;
+
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Order;
 import jakarta.persistence.criteria.Path;
 import jakarta.persistence.criteria.Root;
 import jakarta.persistence.metamodel.SingularAttribute;
-
-import org.apache.ambari.server.controller.spi.SortRequest;
-import org.apache.ambari.server.controller.spi.SortRequestProperty;
-import org.apache.commons.lang.ObjectUtils;
 
 /**
  * The {@link JpaSortBuilder} class is used to convert and Ambari

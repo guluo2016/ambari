@@ -21,6 +21,8 @@ package org.apache.ambari.server.orm.dao;
 import java.util.Collections;
 import java.util.List;
 
+import com.google.inject.Singleton;
+
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.NoResultException;
 import jakarta.persistence.Query;
@@ -28,8 +30,6 @@ import jakarta.persistence.TypedQuery;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Root;
-
-import com.google.inject.Singleton;
 
 @Singleton
 public class DaoUtils {

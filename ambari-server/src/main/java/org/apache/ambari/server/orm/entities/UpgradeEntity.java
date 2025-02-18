@@ -21,6 +21,15 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import org.apache.ambari.server.actionmanager.HostRoleStatus;
+import org.apache.ambari.server.stack.upgrade.Direction;
+import org.apache.ambari.server.state.StackId;
+import org.apache.ambari.spi.RepositoryType;
+import org.apache.ambari.spi.upgrade.UpgradeType;
+import org.apache.commons.lang.builder.EqualsBuilder;
+
+import com.google.common.base.Objects;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -38,15 +47,6 @@ import jakarta.persistence.OneToOne;
 import jakarta.persistence.QueryHint;
 import jakarta.persistence.Table;
 import jakarta.persistence.TableGenerator;
-
-import org.apache.ambari.server.actionmanager.HostRoleStatus;
-import org.apache.ambari.server.stack.upgrade.Direction;
-import org.apache.ambari.server.state.StackId;
-import org.apache.ambari.spi.RepositoryType;
-import org.apache.ambari.spi.upgrade.UpgradeType;
-import org.apache.commons.lang.builder.EqualsBuilder;
-
-import com.google.common.base.Objects;
 
 /**
  * Models the data representation of an upgrade
