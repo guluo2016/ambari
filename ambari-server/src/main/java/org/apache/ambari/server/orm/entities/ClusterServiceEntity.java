@@ -32,8 +32,8 @@ import jakarta.persistence.NamedQuery;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 
-@javax.persistence.IdClass(ClusterServiceEntityPK.class)
-@javax.persistence.Table(name = "clusterservices")
+@jakarta.persistence.IdClass(ClusterServiceEntityPK.class)
+@jakarta.persistence.Table(name = "clusterservices")
 @NamedQueries({
         @NamedQuery(name = "clusterServiceByClusterAndServiceNames", query =
                 "SELECT clusterService " +

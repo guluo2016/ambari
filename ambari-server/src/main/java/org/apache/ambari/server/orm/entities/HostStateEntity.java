@@ -34,7 +34,7 @@ import jakarta.persistence.OneToOne;
 import org.apache.ambari.server.state.HostState;
 import org.apache.commons.lang.StringUtils;
 
-@javax.persistence.Table(name = "hoststate")
+@jakarta.persistence.Table(name = "hoststate")
 @Entity
 @NamedQueries({
     @NamedQuery(name = "hostStateByHostId", query =
@@ -43,7 +43,7 @@ import org.apache.commons.lang.StringUtils;
 })
 public class HostStateEntity {
   
-  @javax.persistence.Column(name = "host_id", nullable = false, insertable = false, updatable = false)
+  @jakarta.persistence.Column(name = "host_id", nullable = false, insertable = false, updatable = false)
   @Id
   private Long hostId;
 
@@ -51,7 +51,7 @@ public class HostStateEntity {
   @Basic
   private Long availableMem = 0L;
 
-  @javax.persistence.Column(name = "time_in_state", nullable = false, insertable = true, updatable = true)
+  @jakarta.persistence.Column(name = "time_in_state", nullable = false, insertable = true, updatable = true)
   @Basic
   private Long timeInState = 0L;
 
