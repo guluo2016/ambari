@@ -21,13 +21,6 @@ import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
 
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.criteria.CriteriaBuilder;
-import jakarta.persistence.criteria.CriteriaQuery;
-import jakarta.persistence.criteria.Path;
-import jakarta.persistence.criteria.Root;
-import jakarta.persistence.metamodel.SingularAttribute;
-
 import org.apache.ambari.server.controller.predicate.AlwaysPredicate;
 import org.apache.ambari.server.controller.predicate.ArrayPredicate;
 import org.apache.ambari.server.controller.predicate.CategoryPredicate;
@@ -36,6 +29,13 @@ import org.apache.ambari.server.controller.predicate.PredicateVisitor;
 import org.apache.ambari.server.controller.predicate.UnaryPredicate;
 import org.apache.ambari.server.controller.spi.Predicate;
 import org.apache.ambari.server.controller.utilities.PredicateHelper;
+
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.criteria.CriteriaBuilder;
+import jakarta.persistence.criteria.CriteriaQuery;
+import jakarta.persistence.criteria.Path;
+import jakarta.persistence.criteria.Root;
+import jakarta.persistence.metamodel.SingularAttribute;
 
 /**
  * The {@link JpaPredicateVisitor} is used to convert an Ambari

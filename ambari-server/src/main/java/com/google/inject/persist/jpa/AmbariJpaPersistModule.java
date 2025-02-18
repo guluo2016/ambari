@@ -27,9 +27,6 @@ import java.lang.reflect.Proxy;
 import java.util.List;
 import java.util.Map;
 
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityManagerFactory;
-
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 import org.apache.ambari.server.orm.AmbariJpaLocalTxnInterceptor;
@@ -46,6 +43,9 @@ import com.google.inject.persist.PersistService;
 import com.google.inject.persist.UnitOfWork;
 import com.google.inject.persist.finder.DynamicFinder;
 import com.google.inject.persist.finder.Finder;
+
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
 
 /**
  * Copy of guice persist module for local modifications
