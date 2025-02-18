@@ -19,21 +19,21 @@ package org.apache.ambari.server.orm.entities;
 
 import java.util.Objects;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.Lob;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
-import javax.persistence.TableGenerator;
+import jakarta.persistencece.CascadeType;
+import jakarta.persistencece.Column;
+import jakarta.persistencece.Entity;
+import jakarta.persistencece.EnumType;
+import jakarta.persistencece.Enumerated;
+import jakarta.persistencece.GeneratedValue;
+import jakarta.persistencece.GenerationType;
+import jakarta.persistencece.Id;
+import jakarta.persistencece.JoinColumn;
+import jakarta.persistencece.Lob;
+import jakarta.persistencece.NamedQueries;
+import jakarta.persistencece.NamedQuery;
+import jakarta.persistencece.OneToOne;
+import jakarta.persistencece.Table;
+import jakarta.persistencece.TableGenerator;
 
 import org.apache.ambari.server.state.AlertFirmness;
 import org.apache.ambari.server.state.AlertState;

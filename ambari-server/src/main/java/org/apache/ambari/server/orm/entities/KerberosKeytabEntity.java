@@ -21,16 +21,16 @@ package org.apache.ambari.server.orm.entities;
 import java.util.ArrayList;
 import java.util.Collection;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-import javax.persistence.QueryHint;
-import javax.persistence.Table;
+import jakarta.persistencece.CascadeType;
+import jakarta.persistencece.Column;
+import jakarta.persistencece.Entity;
+import jakarta.persistencece.FetchType;
+import jakarta.persistencece.Id;
+import jakarta.persistencece.NamedQueries;
+import jakarta.persistencece.NamedQuery;
+import jakarta.persistencece.OneToMany;
+import jakarta.persistencece.QueryHint;
+import jakarta.persistencece.Table;
 
 import org.apache.ambari.server.serveraction.kerberos.stageutils.ResolvedKerberosKeytab;
 

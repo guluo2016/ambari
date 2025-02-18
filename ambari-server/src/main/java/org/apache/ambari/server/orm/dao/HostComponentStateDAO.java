@@ -20,9 +20,9 @@ package org.apache.ambari.server.orm.dao;
 
 import java.util.List;
 
-import javax.persistence.EntityManager;
-import javax.persistence.NoResultException;
-import javax.persistence.TypedQuery;
+import jakarta.persistencece.EntityManager;
+import jakarta.persistencece.NoResultException;
+import jakarta.persistencece.TypedQuery;
 
 import org.apache.ambari.server.orm.RequiresSession;
 import org.apache.ambari.server.orm.entities.HostComponentStateEntity;

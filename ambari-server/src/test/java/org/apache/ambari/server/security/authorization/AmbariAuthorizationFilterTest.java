@@ -26,7 +26,7 @@ import static org.easymock.EasyMock.verify;
 
 import java.util.Collections;
 
-import javax.persistence.EntityManager;
+import jakarta.persistence.EntityManager;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
 import javax.servlet.http.HttpServletRequest;

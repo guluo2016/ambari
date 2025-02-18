@@ -21,13 +21,13 @@ package org.apache.ambari.server.orm.dao;
 import java.util.Collections;
 import java.util.List;
 
-import javax.persistence.EntityManager;
-import javax.persistence.NoResultException;
-import javax.persistence.Query;
-import javax.persistence.TypedQuery;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Root;
+import jakarta.persistencece.EntityManager;
+import jakarta.persistencece.NoResultException;
+import jakarta.persistencece.Query;
+import jakarta.persistencece.TypedQuery;
+import jakarta.persistencece.criteria.CriteriaBuilder;
+import jakarta.persistencece.criteria.CriteriaQuery;
+import jakarta.persistencece.criteria.Root;
 
 import com.google.inject.Singleton;
 

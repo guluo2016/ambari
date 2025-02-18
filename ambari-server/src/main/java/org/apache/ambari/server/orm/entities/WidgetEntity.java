@@ -20,22 +20,22 @@ package org.apache.ambari.server.orm.entities;
 import java.util.List;
 import java.util.Objects;
 
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.Lob;
-import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-import javax.persistence.TableGenerator;
+import jakarta.persistencece.Basic;
+import jakarta.persistencece.CascadeType;
+import jakarta.persistencece.Column;
+import jakarta.persistencece.Entity;
+import jakarta.persistencece.FetchType;
+import jakarta.persistencece.GeneratedValue;
+import jakarta.persistencece.GenerationType;
+import jakarta.persistencece.Id;
+import jakarta.persistencece.JoinColumn;
+import jakarta.persistencece.Lob;
+import jakarta.persistencece.ManyToOne;
+import jakarta.persistencece.NamedQueries;
+import jakarta.persistencece.NamedQuery;
+import jakarta.persistencece.OneToMany;
+import jakarta.persistencece.Table;
+import jakarta.persistencece.TableGenerator;
 
 @Entity
 @Table(name = "widget")

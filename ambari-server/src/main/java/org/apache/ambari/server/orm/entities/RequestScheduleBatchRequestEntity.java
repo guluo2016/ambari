@@ -17,19 +17,19 @@
  */
 package org.apache.ambari.server.orm.entities;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.Id;
-import javax.persistence.IdClass;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.Lob;
-import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
+import jakarta.persistencece.Basic;
+import jakarta.persistencece.Column;
+import jakarta.persistencece.Entity;
+import jakarta.persistencece.FetchType;
+import jakarta.persistencece.Id;
+import jakarta.persistencece.IdClass;
+import jakarta.persistencece.JoinColumn;
+import jakarta.persistencece.JoinColumns;
+import jakarta.persistencece.Lob;
+import jakarta.persistencece.ManyToOne;
+import jakarta.persistencece.NamedQueries;
+import jakarta.persistencece.NamedQuery;
+import jakarta.persistencece.Table;
 
 @IdClass(RequestScheduleBatchRequestEntityPK.class)
 @Entity

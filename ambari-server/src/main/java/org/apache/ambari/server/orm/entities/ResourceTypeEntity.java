@@ -18,13 +18,13 @@
 
 package org.apache.ambari.server.orm.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.TableGenerator;
+import jakarta.persistencece.Column;
+import jakarta.persistencece.Entity;
+import jakarta.persistencece.GeneratedValue;
+import jakarta.persistencece.GenerationType;
+import jakarta.persistencece.Id;
+import jakarta.persistencece.Table;
+import jakarta.persistencece.TableGenerator;
 
 /**
  * Represents a resource type.

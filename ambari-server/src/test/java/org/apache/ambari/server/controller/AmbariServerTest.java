@@ -38,8 +38,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.EnumSet;
 
-import javax.persistence.EntityManager;
-import javax.persistence.TypedQuery;
+import jakarta.persistencece.EntityManager;
+import jakarta.persistencece.TypedQuery;
 import javax.servlet.DispatcherType;
 import javax.servlet.SessionCookieConfig;
 
