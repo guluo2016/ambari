@@ -375,7 +375,7 @@ public class AlertDispatchDAO {
     PredicateHelper.visit(request.Predicate, visitor);
 
     CriteriaQuery<AlertNoticeEntity> query = visitor.getCriteriaQuery();
-    javax.persistence.criteria.Predicate jpaPredicate = visitor.getJpaPredicate();
+    jakarta.persistence.criteria.Predicate jpaPredicate = visitor.getJpaPredicate();
 
     if (null != jpaPredicate) {
       query.where(jpaPredicate);
@@ -775,7 +775,7 @@ public class AlertDispatchDAO {
 
   /**
    * The {@link NoticePredicateVisitor} is used to convert an Ambari
-   * {@link Predicate} into a JPA {@link javax.persistence.criteria.Predicate}.
+   * {@link Predicate} into a JPA {@link jakarta.persistence.criteria.Predicate}.
    */
   private final class NoticePredicateVisitor extends
       JpaPredicateVisitor<AlertNoticeEntity> {

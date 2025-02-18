@@ -33,7 +33,7 @@ import jakarta.persistence.Table;
 /**
  * Represents a Host Group which is embedded in a Blueprint.
  */
-@javax.persistence.IdClass(HostGroupEntityPK.class)
+@jakarta.persistence.IdClass(HostGroupEntityPK.class)
 @Table(name = "hostgroup")
 @Entity
 public class HostGroupEntity {

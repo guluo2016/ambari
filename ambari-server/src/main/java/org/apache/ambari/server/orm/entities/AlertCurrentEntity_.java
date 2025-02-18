@@ -53,7 +53,7 @@ public class AlertCurrentEntity_ {
    * {@link SingularAttribute}.
    * <p/>
    * This is used when converting an Ambari {@link Predicate} into a JPA
-   * {@link javax.persistence.criteria.Predicate} and we need a type-safe
+   * {@link jakarta.persistence.criteria.Predicate} and we need a type-safe
    * conversion between "category/property" and JPA field names.
    * <p/>
    * Multiple {@link SingularAttribute} instances can be chained together in

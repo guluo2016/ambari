@@ -953,7 +953,7 @@ public class HostRoleCommandDAO {
     PredicateHelper.visit(predicate, visitor);
 
     CriteriaQuery<HostRoleCommandEntity> query = visitor.getCriteriaQuery();
-    javax.persistence.criteria.Predicate jpaPredicate = visitor.getJpaPredicate();
+    jakarta.persistence.criteria.Predicate jpaPredicate = visitor.getJpaPredicate();
 
     if (null != jpaPredicate) {
       query.where(jpaPredicate);
@@ -1047,7 +1047,7 @@ public class HostRoleCommandDAO {
 
   /**
    * The {@link HostRoleCommandPredicateVisitor} is used to convert an Ambari
-   * {@link Predicate} into a JPA {@link javax.persistence.criteria.Predicate}.
+   * {@link Predicate} into a JPA {@link jakarta.persistence.criteria.Predicate}.
    */
   private final class HostRoleCommandPredicateVisitor
       extends JpaPredicateVisitor<HostRoleCommandEntity> {

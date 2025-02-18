@@ -30,7 +30,7 @@ import jakarta.persistence.Table;
 /**
  * Represents a property of a View instance.
  */
-@javax.persistence.IdClass(ViewInstancePropertyEntityPK.class)
+@jakarta.persistence.IdClass(ViewInstancePropertyEntityPK.class)
 @Table(name = "viewinstanceproperty")
 @Entity
 public class ViewInstancePropertyEntity {

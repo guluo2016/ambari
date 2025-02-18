@@ -29,7 +29,7 @@ import jakarta.persistence.Table;
 /**
  * Represents a parameter of a View.
  */
-@javax.persistence.IdClass(ViewParameterEntityPK.class)
+@jakarta.persistence.IdClass(ViewParameterEntityPK.class)
 @Table(name = "viewparameter")
 @Entity
 public class ViewParameterEntity {

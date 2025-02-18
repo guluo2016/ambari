@@ -351,7 +351,7 @@ public class AlertsDAO implements Cleanable {
     PredicateHelper.visit(request.Predicate, visitor);
 
     CriteriaQuery<AlertHistoryEntity> query = visitor.getCriteriaQuery();
-    javax.persistence.criteria.Predicate jpaPredicate = visitor.getJpaPredicate();
+    jakarta.persistence.criteria.Predicate jpaPredicate = visitor.getJpaPredicate();
 
     if (null != jpaPredicate) {
       query.where(jpaPredicate);
@@ -389,7 +389,7 @@ public class AlertsDAO implements Cleanable {
     PredicateHelper.visit(request.Predicate, visitor);
 
     CriteriaQuery<AlertCurrentEntity> query = visitor.getCriteriaQuery();
-    javax.persistence.criteria.Predicate jpaPredicate = visitor.getJpaPredicate();
+    jakarta.persistence.criteria.Predicate jpaPredicate = visitor.getJpaPredicate();
 
     if (null != jpaPredicate) {
       query.where(jpaPredicate);
@@ -1272,7 +1272,7 @@ public class AlertsDAO implements Cleanable {
 
   /**
    * The {@link HistoryPredicateVisitor} is used to convert an Ambari
-   * {@link Predicate} into a JPA {@link javax.persistence.criteria.Predicate}.
+   * {@link Predicate} into a JPA {@link jakarta.persistence.criteria.Predicate}.
    */
   private final class HistoryPredicateVisitor extends
       JpaPredicateVisitor<AlertHistoryEntity> {
@@ -1305,7 +1305,7 @@ public class AlertsDAO implements Cleanable {
 
   /**
    * The {@link CurrentPredicateVisitor} is used to convert an Ambari
-   * {@link Predicate} into a JPA {@link javax.persistence.criteria.Predicate}.
+   * {@link Predicate} into a JPA {@link jakarta.persistence.criteria.Predicate}.
    */
   private final class CurrentPredicateVisitor extends
       JpaPredicateVisitor<AlertCurrentEntity> {

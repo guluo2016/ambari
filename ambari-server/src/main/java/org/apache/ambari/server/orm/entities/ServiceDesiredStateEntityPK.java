@@ -27,7 +27,7 @@ import jakarta.persistence.Id;
 public class ServiceDesiredStateEntityPK implements Serializable {
   private Long clusterId;
 
-  @javax.persistence.Column(name = "cluster_id", nullable = false, insertable = true, updatable = true, length = 10)
+  @jakarta.persistence.Column(name = "cluster_id", nullable = false, insertable = true, updatable = true, length = 10)
   @Id
   public Long getClusterId() {
     return clusterId;

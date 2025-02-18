@@ -34,8 +34,8 @@ import org.apache.ambari.server.state.MaintenanceState;
 import org.apache.ambari.server.state.State;
 import org.apache.commons.lang.builder.EqualsBuilder;
 
-@javax.persistence.IdClass(ServiceDesiredStateEntityPK.class)
-@javax.persistence.Table(name = "servicedesiredstate")
+@jakarta.persistence.IdClass(ServiceDesiredStateEntityPK.class)
+@jakarta.persistence.Table(name = "servicedesiredstate")
 @Entity
 public class ServiceDesiredStateEntity {
 
@@ -63,7 +63,7 @@ public class ServiceDesiredStateEntity {
   private short credentialStoreEnabled = 0;
 
   @OneToOne
-  @javax.persistence.JoinColumns(
+  @jakarta.persistence.JoinColumns(
       {
           @JoinColumn(name = "cluster_id", referencedColumnName = "cluster_id", nullable = false),
           @JoinColumn(name = "service_name", referencedColumnName = "service_name", nullable = false)

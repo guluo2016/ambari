@@ -31,7 +31,7 @@ import jakarta.persistence.Table;
 /**
  * Represents a blueprint configuration.
  */
-@javax.persistence.IdClass(BlueprintConfigEntityPK.class)
+@jakarta.persistence.IdClass(BlueprintConfigEntityPK.class)
 @Table(name = "blueprint_configuration")
 @Entity
 public class BlueprintConfigEntity implements BlueprintConfiguration {

@@ -32,7 +32,7 @@ import jakarta.persistence.Table;
 /**
  * Represents a resource of a View.
  */
-@javax.persistence.IdClass(ViewResourceEntityPK.class)
+@jakarta.persistence.IdClass(ViewResourceEntityPK.class)
 @Table(name = "viewresource")
 @Entity
 public class ViewResourceEntity {

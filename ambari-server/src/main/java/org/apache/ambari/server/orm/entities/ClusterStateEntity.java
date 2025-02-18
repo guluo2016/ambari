@@ -27,7 +27,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 
-@javax.persistence.Table(name = "clusterstate")
+@jakarta.persistence.Table(name = "clusterstate")
 @Entity
 public class ClusterStateEntity {
 

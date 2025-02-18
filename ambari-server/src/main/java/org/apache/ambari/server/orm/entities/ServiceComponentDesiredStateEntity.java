@@ -104,7 +104,7 @@ public class ServiceComponentDesiredStateEntity {
   private RepositoryVersionEntity desiredRepositoryVersion;
 
   @ManyToOne
-  @JoinColumns({@javax.persistence.JoinColumn(name = "cluster_id", referencedColumnName = "cluster_id", nullable = false), @JoinColumn(name = "service_name", referencedColumnName = "service_name", nullable = false)})
+  @JoinColumns({@jakarta.persistence.JoinColumn(name = "cluster_id", referencedColumnName = "cluster_id", nullable = false), @JoinColumn(name = "service_name", referencedColumnName = "service_name", nullable = false)})
   private ClusterServiceEntity clusterServiceEntity;
 
   @OneToMany(mappedBy = "serviceComponentDesiredStateEntity")
