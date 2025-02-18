@@ -19,16 +19,16 @@ package org.apache.ambari.server.orm.entities;
 
 import java.util.Collection;
 
-import jakarta.persistencece.CascadeType;
-import jakarta.persistencece.Column;
-import jakarta.persistencece.Entity;
-import jakarta.persistencece.Id;
-import jakarta.persistencece.JoinColumn;
-import jakarta.persistencece.NamedQueries;
-import jakarta.persistencece.NamedQuery;
-import jakarta.persistencece.OneToMany;
-import jakarta.persistencece.OneToOne;
-import jakarta.persistencece.Table;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.NamedQueries;
+import jakarta.persistence.NamedQuery;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "topology_logical_request")

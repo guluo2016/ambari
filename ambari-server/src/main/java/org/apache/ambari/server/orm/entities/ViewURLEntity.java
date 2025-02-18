@@ -18,17 +18,17 @@
 
 package org.apache.ambari.server.orm.entities;
 
-import jakarta.persistencece.Column;
-import jakarta.persistencece.Entity;
-import jakarta.persistencece.FetchType;
-import jakarta.persistencece.GeneratedValue;
-import jakarta.persistencece.GenerationType;
-import jakarta.persistencece.Id;
-import jakarta.persistencece.NamedQueries;
-import jakarta.persistencece.NamedQuery;
-import jakarta.persistencece.OneToOne;
-import jakarta.persistencece.Table;
-import jakarta.persistencece.TableGenerator;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.NamedQueries;
+import jakarta.persistence.NamedQuery;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
+import jakarta.persistence.TableGenerator;
 
 /**
  * Represents an entity of a View.

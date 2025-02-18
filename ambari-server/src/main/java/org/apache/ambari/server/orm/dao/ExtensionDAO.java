@@ -19,8 +19,8 @@ package org.apache.ambari.server.orm.dao;
 
 import java.util.List;
 
-import jakarta.persistencece.EntityManager;
-import jakarta.persistencece.TypedQuery;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.TypedQuery;
 
 import org.apache.ambari.server.AmbariException;
 import org.apache.ambari.server.orm.RequiresSession;

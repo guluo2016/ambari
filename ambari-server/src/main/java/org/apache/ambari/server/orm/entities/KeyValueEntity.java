@@ -19,11 +19,11 @@
 package org.apache.ambari.server.orm.entities;
 
 
-import jakarta.persistencece.Column;
-import jakarta.persistencece.Entity;
-import jakarta.persistencece.Id;
-import jakarta.persistencece.Lob;
-import jakarta.persistencece.Table;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
+import jakarta.persistence.Table;
 
 @Table(name = "key_value_store")
 @Entity

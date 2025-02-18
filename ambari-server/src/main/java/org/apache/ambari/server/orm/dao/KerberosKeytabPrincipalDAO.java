@@ -23,13 +23,13 @@ import java.util.Collections;
 import java.util.List;
 
 import javax.annotation.Nullable;
-import jakarta.persistencece.EntityManager;
-import jakarta.persistencece.TypedQuery;
-import jakarta.persistencece.criteria.CriteriaBuilder;
-import jakarta.persistencece.criteria.CriteriaQuery;
-import jakarta.persistencece.criteria.Join;
-import jakarta.persistencece.criteria.Predicate;
-import jakarta.persistencece.criteria.Root;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.TypedQuery;
+import jakarta.persistence.criteria.CriteriaBuilder;
+import jakarta.persistence.criteria.CriteriaQuery;
+import jakarta.persistence.criteria.Join;
+import jakarta.persistence.criteria.Predicate;
+import jakarta.persistence.criteria.Root;
 
 import org.apache.ambari.server.orm.RequiresSession;
 import org.apache.ambari.server.orm.entities.HostEntity;

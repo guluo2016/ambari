@@ -19,12 +19,12 @@
 package org.apache.ambari.server.orm.entities;
 
 
-import jakarta.persistencece.Column;
-import jakarta.persistencece.Entity;
-import jakarta.persistencece.Id;
-import jakarta.persistencece.NamedQueries;
-import jakarta.persistencece.NamedQuery;
-import jakarta.persistencece.Table;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.NamedQueries;
+import jakarta.persistence.NamedQuery;
+import jakarta.persistence.Table;
 
 /**
  * Represents an authorization (typically assigned to a permission)

@@ -19,24 +19,24 @@ package org.apache.ambari.server.orm.entities;
 
 import java.util.Set;
 
-import jakarta.persistencece.Basic;
-import jakarta.persistencece.CascadeType;
-import jakarta.persistencece.Column;
-import jakarta.persistencece.Entity;
-import jakarta.persistencece.EnumType;
-import jakarta.persistencece.Enumerated;
-import jakarta.persistencece.GeneratedValue;
-import jakarta.persistencece.GenerationType;
-import jakarta.persistencece.Id;
-import jakarta.persistencece.JoinColumn;
-import jakarta.persistencece.JoinColumns;
-import jakarta.persistencece.NamedQueries;
-import jakarta.persistencece.NamedQuery;
-import jakarta.persistencece.OneToMany;
-import jakarta.persistencece.OneToOne;
-import jakarta.persistencece.Table;
-import jakarta.persistencece.TableGenerator;
-import jakarta.persistencece.UniqueConstraint;
+import jakarta.persistence.Basic;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinColumns;
+import jakarta.persistence.NamedQueries;
+import jakarta.persistence.NamedQuery;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
+import jakarta.persistence.TableGenerator;
+import jakarta.persistence.UniqueConstraint;
 
 import org.apache.ambari.server.security.authorization.GroupType;
 

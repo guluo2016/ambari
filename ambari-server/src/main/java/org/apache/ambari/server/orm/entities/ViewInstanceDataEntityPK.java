@@ -18,8 +18,8 @@
 
 package org.apache.ambari.server.orm.entities;
 
-import jakarta.persistencece.Column;
-import jakarta.persistencece.Id;
+import jakarta.persistence.Column;
+import jakarta.persistence.Id;
 
 /**
  * Composite primary key for ViewInstanceDataEntity.
