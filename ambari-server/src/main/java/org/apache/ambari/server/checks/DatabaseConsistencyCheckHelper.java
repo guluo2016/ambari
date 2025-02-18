@@ -39,7 +39,8 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.inject.Provider;
+
+import jakarta.inject.Provider;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;
 import jakarta.persistence.TypedQuery;
@@ -616,6 +617,7 @@ public class DatabaseConsistencyCheckHelper {
    * @return ClusterConfigs that are not mapped to Service
    */
   private static List<ClusterConfigEntity> getNotMappedClusterConfigsToService() {
+    injector.getProvider(EntityManager.class);
     Provider<EntityManager> entityManagerProvider = injector.getProvider(EntityManager.class);
     EntityManager entityManager = entityManagerProvider.get();
 
