@@ -20,6 +20,9 @@ package org.apache.ambari.server.orm.entities;
 
 import java.util.Objects;
 
+import org.apache.ambari.server.state.HostState;
+import org.apache.commons.lang.StringUtils;
+
 import jakarta.persistence.Basic;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -30,9 +33,6 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.NamedQueries;
 import jakarta.persistence.NamedQuery;
 import jakarta.persistence.OneToOne;
-
-import org.apache.ambari.server.state.HostState;
-import org.apache.commons.lang.StringUtils;
 
 @jakarta.persistence.Table(name = "hoststate")
 @Entity

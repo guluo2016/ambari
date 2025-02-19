@@ -25,6 +25,10 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
+import org.apache.ambari.server.state.AlertState;
+
+import com.google.common.collect.ImmutableSet;
+
 import jakarta.persistence.Basic;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.CollectionTable;
@@ -47,10 +51,6 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.PreRemove;
 import jakarta.persistence.Table;
 import jakarta.persistence.TableGenerator;
-
-import org.apache.ambari.server.state.AlertState;
-
-import com.google.common.collect.ImmutableSet;
 
 /**
  * The {@link AlertTargetEntity} class represents audience that will receive

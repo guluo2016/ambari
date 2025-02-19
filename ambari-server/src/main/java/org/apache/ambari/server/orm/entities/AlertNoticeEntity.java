@@ -17,6 +17,9 @@
  */
 package org.apache.ambari.server.orm.entities;
 
+import org.apache.ambari.server.state.NotificationState;
+import org.apache.commons.lang.builder.EqualsBuilder;
+
 import jakarta.persistence.Basic;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -32,9 +35,6 @@ import jakarta.persistence.NamedQueries;
 import jakarta.persistence.NamedQuery;
 import jakarta.persistence.Table;
 import jakarta.persistence.TableGenerator;
-
-import org.apache.ambari.server.state.NotificationState;
-import org.apache.commons.lang.builder.EqualsBuilder;
 
 /**
  * The {@link AlertNoticeEntity} class represents the need to dispatch a

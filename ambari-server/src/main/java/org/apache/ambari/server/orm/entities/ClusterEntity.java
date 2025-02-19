@@ -22,6 +22,9 @@ import static org.apache.commons.lang.StringUtils.defaultString;
 
 import java.util.Collection;
 
+import org.apache.ambari.server.state.SecurityType;
+import org.apache.ambari.server.state.State;
+
 import jakarta.persistence.Basic;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -41,9 +44,6 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.TableGenerator;
-
-import org.apache.ambari.server.state.SecurityType;
-import org.apache.ambari.server.state.State;
 
 @Table(name = "clusters")
 @NamedQueries({

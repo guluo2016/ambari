@@ -23,6 +23,10 @@ import java.util.Iterator;
 import java.util.Objects;
 import java.util.Set;
 
+import org.apache.ambari.server.state.AlertState;
+import org.apache.ambari.server.state.alert.Scope;
+import org.apache.ambari.server.state.alert.SourceType;
+
 import jakarta.persistence.Basic;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -45,10 +49,6 @@ import jakarta.persistence.QueryHint;
 import jakarta.persistence.Table;
 import jakarta.persistence.TableGenerator;
 import jakarta.persistence.UniqueConstraint;
-
-import org.apache.ambari.server.state.AlertState;
-import org.apache.ambari.server.state.alert.Scope;
-import org.apache.ambari.server.state.alert.SourceType;
 
 /**
  * The {@link AlertDefinitionEntity} class is used to model an alert that needs

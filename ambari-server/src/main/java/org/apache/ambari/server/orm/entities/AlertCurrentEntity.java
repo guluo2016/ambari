@@ -19,6 +19,11 @@ package org.apache.ambari.server.orm.entities;
 
 import java.util.Objects;
 
+import org.apache.ambari.server.state.AlertFirmness;
+import org.apache.ambari.server.state.AlertState;
+import org.apache.ambari.server.state.MaintenanceState;
+import org.apache.commons.lang.builder.EqualsBuilder;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -34,11 +39,6 @@ import jakarta.persistence.NamedQuery;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.TableGenerator;
-
-import org.apache.ambari.server.state.AlertFirmness;
-import org.apache.ambari.server.state.AlertState;
-import org.apache.ambari.server.state.MaintenanceState;
-import org.apache.commons.lang.builder.EqualsBuilder;
 
 /**
  * The {@link AlertCurrentEntity} class represents the most recently received an

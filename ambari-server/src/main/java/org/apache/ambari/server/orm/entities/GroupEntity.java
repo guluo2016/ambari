@@ -19,6 +19,8 @@ package org.apache.ambari.server.orm.entities;
 
 import java.util.Set;
 
+import org.apache.ambari.server.security.authorization.GroupType;
+
 import jakarta.persistence.Basic;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -37,8 +39,6 @@ import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.TableGenerator;
 import jakarta.persistence.UniqueConstraint;
-
-import org.apache.ambari.server.security.authorization.GroupType;
 
 @Entity
 @Table(name = "\"groups\"", uniqueConstraints = {@UniqueConstraint(columnNames = {"group_name", "ldap_group"})})

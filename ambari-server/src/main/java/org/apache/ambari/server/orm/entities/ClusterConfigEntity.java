@@ -21,6 +21,10 @@ package org.apache.ambari.server.orm.entities;
 import java.util.Collection;
 import java.util.Objects;
 
+import org.apache.commons.lang.builder.EqualsBuilder;
+
+import com.google.common.base.MoreObjects;
+
 import jakarta.persistence.Basic;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -39,10 +43,6 @@ import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.TableGenerator;
 import jakarta.persistence.UniqueConstraint;
-
-import org.apache.commons.lang.builder.EqualsBuilder;
-
-import com.google.common.base.MoreObjects;
 
 @Entity
 @Table(name = "clusterconfig",
