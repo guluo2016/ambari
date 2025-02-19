@@ -61,6 +61,7 @@ public class AmbariJpaPersistModule extends PersistModule {
     }
   }
 
+  private JpaPersistOptions options;
   private Map<?, ?> properties;
   private MethodInterceptor transactionInterceptor;
 
@@ -99,6 +100,10 @@ public class AmbariJpaPersistModule extends PersistModule {
     return properties;
   }
 
+  @Provides @Jpa JpaPersistOptions provideOptions() {
+    return options;
+  }
+
   /**
    * Configures the JPA persistence provider with a set of properties.
    *
@@ -106,6 +111,7 @@ public class AmbariJpaPersistModule extends PersistModule {
    * provider as per the specification.
    */
   public AmbariJpaPersistModule properties(Map<?, ?> properties) {
+    this.options = JpaPersistOptions.builder().build();
     this.properties = properties;
     return this;
   }
