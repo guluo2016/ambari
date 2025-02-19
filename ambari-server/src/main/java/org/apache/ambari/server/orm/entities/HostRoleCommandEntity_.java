@@ -24,11 +24,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import jakarta.persistence.metamodel.SingularAttribute;
-
 import org.apache.ambari.server.controller.internal.TaskResourceProvider;
 import org.apache.ambari.server.controller.spi.Predicate;
 
+import jakarta.persistence.metamodel.SingularAttribute;
 
 /**
  * This class exists so that JPQL can use static singular attributes that are strongly typed

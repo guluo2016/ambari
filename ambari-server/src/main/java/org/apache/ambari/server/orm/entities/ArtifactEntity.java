@@ -21,6 +21,11 @@ package org.apache.ambari.server.orm.entities;
 import java.util.Collections;
 import java.util.Map;
 
+import org.eclipse.persistence.config.HintValues;
+import org.eclipse.persistence.config.QueryHints;
+
+import com.google.gson.Gson;
+
 import jakarta.persistence.Basic;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -32,10 +37,6 @@ import jakarta.persistence.QueryHint;
 import jakarta.persistence.Table;
 import jakarta.persistence.Transient;
 
-import org.eclipse.persistence.config.HintValues;
-import org.eclipse.persistence.config.QueryHints;
-
-import com.google.gson.Gson;
 /**
  * Entity representing an Artifact.
  */

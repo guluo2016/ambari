@@ -18,14 +18,13 @@
 
 package org.apache.ambari.server.orm.entities;
 
+import org.apache.ambari.server.state.alert.Scope;
+import org.apache.ambari.server.state.alert.SourceType;
+
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.metamodel.SetAttribute;
 import jakarta.persistence.metamodel.SingularAttribute;
 import jakarta.persistence.metamodel.StaticMetamodel;
-
-import org.apache.ambari.server.state.alert.Scope;
-import org.apache.ambari.server.state.alert.SourceType;
-
 
 /**
  * The {@link AlertDefinitionEntity_} is a strongly typed metamodel for creating

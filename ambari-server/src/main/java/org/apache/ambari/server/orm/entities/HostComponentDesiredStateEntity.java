@@ -19,6 +19,14 @@ package org.apache.ambari.server.orm.entities;
 
 import static org.apache.commons.lang.StringUtils.defaultString;
 
+import org.apache.ambari.server.state.BlueprintProvisioningState;
+import org.apache.ambari.server.state.HostComponentAdminState;
+import org.apache.ambari.server.state.MaintenanceState;
+import org.apache.ambari.server.state.State;
+
+import com.google.common.base.MoreObjects;
+import com.google.common.base.Objects;
+
 import jakarta.persistence.Basic;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -35,15 +43,6 @@ import jakarta.persistence.NamedQuery;
 import jakarta.persistence.Table;
 import jakarta.persistence.TableGenerator;
 import jakarta.persistence.UniqueConstraint;
-
-import org.apache.ambari.server.state.BlueprintProvisioningState;
-import org.apache.ambari.server.state.HostComponentAdminState;
-import org.apache.ambari.server.state.MaintenanceState;
-import org.apache.ambari.server.state.State;
-
-import com.google.common.base.MoreObjects;
-import com.google.common.base.Objects;
-
 
 @Entity
 @Table(

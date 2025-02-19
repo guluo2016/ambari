@@ -19,6 +19,8 @@ package org.apache.ambari.server.orm.entities;
 
 import java.util.Objects;
 
+import org.apache.ambari.server.state.AlertState;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -33,8 +35,6 @@ import jakarta.persistence.NamedQueries;
 import jakarta.persistence.NamedQuery;
 import jakarta.persistence.Table;
 import jakarta.persistence.TableGenerator;
-
-import org.apache.ambari.server.state.AlertState;
 
 /**
  * The {@link AlertHistoryEntity} class is an instance of an alert state change

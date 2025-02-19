@@ -18,6 +18,11 @@
 
 package org.apache.ambari.server.orm.entities;
 
+import org.apache.ambari.server.state.State;
+import org.apache.ambari.server.state.UpgradeState;
+
+import com.google.common.base.MoreObjects;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -32,11 +37,6 @@ import jakarta.persistence.NamedQueries;
 import jakarta.persistence.NamedQuery;
 import jakarta.persistence.Table;
 import jakarta.persistence.TableGenerator;
-
-import org.apache.ambari.server.state.State;
-import org.apache.ambari.server.state.UpgradeState;
-
-import com.google.common.base.MoreObjects;
 
 @Entity
 @Table(name = "hostcomponentstate")

@@ -34,6 +34,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
+import javax.annotation.Nullable;
+
 import org.apache.ambari.server.AmbariException;
 import org.apache.ambari.server.configuration.AmbariServerConfiguration;
 import org.apache.ambari.server.configuration.Configuration;
@@ -69,7 +71,6 @@ import com.google.inject.Injector;
 import com.google.inject.TypeLiteral;
 import com.google.inject.name.Names;
 
-import javax.annotation.Nullable;
 import jakarta.persistence.EntityManager;
 
 public class UsersTest extends EasyMockSupport {

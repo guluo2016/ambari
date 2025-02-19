@@ -17,6 +17,11 @@
  */
 package org.apache.ambari.server.orm.entities;
 
+import org.apache.commons.lang.builder.EqualsBuilder;
+
+import com.google.common.base.MoreObjects;
+import com.google.common.base.Objects;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -29,11 +34,6 @@ import jakarta.persistence.NamedQuery;
 import jakarta.persistence.Table;
 import jakarta.persistence.TableGenerator;
 import jakarta.persistence.UniqueConstraint;
-
-import org.apache.commons.lang.builder.EqualsBuilder;
-
-import com.google.common.base.MoreObjects;
-import com.google.common.base.Objects;
 
 /**
  * The {@link UpgradeHistoryEntity} represents the version history of components
