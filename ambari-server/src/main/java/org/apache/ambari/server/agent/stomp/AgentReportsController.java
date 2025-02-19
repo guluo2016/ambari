@@ -22,7 +22,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-import javax.inject.Provider;
 import javax.ws.rs.WebApplicationException;
 
 import org.apache.ambari.server.AmbariException;
@@ -54,6 +53,7 @@ import org.springframework.messaging.simp.annotation.SendToUser;
 import org.springframework.stereotype.Controller;
 
 import com.google.inject.Injector;
+import com.google.inject.Provider;
 
 @Controller
 @SendToUser("/")

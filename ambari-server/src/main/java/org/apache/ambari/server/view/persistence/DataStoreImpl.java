@@ -35,8 +35,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.StringTokenizer;
 
-import javax.inject.Inject;
-
 import org.apache.ambari.server.orm.entities.ViewEntityEntity;
 import org.apache.ambari.server.orm.entities.ViewInstanceEntity;
 import org.apache.ambari.view.DataStore;
@@ -59,6 +57,8 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Query;
+
+import com.google.inject.Inject;
 
 /**
  * A data store implementation that uses dynamic JPA entities to

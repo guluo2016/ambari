@@ -19,13 +19,12 @@ package org.apache.ambari.server.orm.dao;
 
 import java.util.List;
 
-import javax.inject.Inject;
-import javax.inject.Provider;
-import javax.inject.Singleton;
-
 import org.apache.ambari.server.orm.RequiresSession;
 import org.apache.ambari.server.orm.entities.KerberosDescriptorEntity;
 
+import com.google.inject.Inject;
+import com.google.inject.Provider;
+import com.google.inject.Singleton;
 import com.google.inject.persist.Transactional;
 
 import jakarta.persistence.EntityManager;

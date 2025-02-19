@@ -111,7 +111,7 @@ public class AmbariJpaPersistModule extends PersistModule {
    * provider as per the specification.
    */
   public AmbariJpaPersistModule properties(Map<?, ?> properties) {
-    this.options = JpaPersistOptions.builder().build();
+    this.options = JpaPersistOptions.builder().setAutoBeginWorkOnEntityManagerCreation(true).build();
     this.properties = properties;
     return this;
   }

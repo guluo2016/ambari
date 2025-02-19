@@ -20,12 +20,11 @@ package org.apache.ambari.server.serveraction.users;
 
 import java.util.concurrent.Callable;
 
-import javax.inject.Singleton;
-
 import org.apache.ambari.server.utils.ShellCommandUtil;
 
 import com.google.inject.assistedinject.Assisted;
 import com.google.inject.assistedinject.AssistedInject;
+import com.google.inject.Singleton;
 
 /**
  * Wraps a shell command execution into a callable.
