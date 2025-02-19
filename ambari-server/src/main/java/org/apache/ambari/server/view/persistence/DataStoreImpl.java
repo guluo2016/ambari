@@ -53,12 +53,12 @@ import org.eclipse.persistence.sessions.Session;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.inject.Inject;
+
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Query;
-
-import com.google.inject.Inject;
 
 /**
  * A data store implementation that uses dynamic JPA entities to

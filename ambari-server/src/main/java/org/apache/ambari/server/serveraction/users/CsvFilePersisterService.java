@@ -36,9 +36,9 @@ import org.apache.commons.csv.CSVPrinter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.inject.Inject;
 import com.google.inject.assistedinject.Assisted;
 import com.google.inject.assistedinject.AssistedInject;
-import com.google.inject.Inject;
 
 public class CsvFilePersisterService implements CollectionPersisterService<String, List<String>> {
 

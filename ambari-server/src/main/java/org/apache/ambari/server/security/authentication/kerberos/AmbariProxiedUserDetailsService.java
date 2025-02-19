@@ -50,8 +50,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
-import com.google.inject.Provider;
 import com.google.inject.Inject;
+import com.google.inject.Provider;
 
 /**
  * AmbariProxiedUserDetailsService is a {@link UserDetailsService} that handles proxied users via the
