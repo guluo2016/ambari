@@ -11,7 +11,9 @@
 #   limitations under the License.
 FROM rockylinux:8
 
-COPY $AMABARI_SERVER_RPM_PATH /root/
+ARG AMBARI_SERVER_RPM
+
+COPY ${AMBARI_SERVER_RPM} /opt/
 RUN curl -L -s -S https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.14%2B7/OpenJDK17U-jdk_x64_linux_hotspot_17.0.14_7.tar.gz  -o OpenJDK17U-jdk_x64_linux_hotspot_17.0.14_7.tar.gz && \
     curl -L -s -S https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u442-b06/OpenJDK8U-jdk_x64_linux_hotspot_8u442b06.tar.gz -o OpenJDK8U-jdk_x64_linux_hotspot_8u442b06.tar.gz && \
     tar -xzf OpenJDK17U-jdk_x64_linux_hotspot_17.0.14_7.tar.gz -C /usr/local && \
@@ -19,6 +21,8 @@ RUN curl -L -s -S https://github.com/adoptium/temurin17-binaries/releases/downlo
     ln -s /usr/local/jdk8u442-b06 /usr/local/java && \
     rm -f OpenJDK17U-jdk_x64_linux_hotspot_17.0.14_7.tar.gz OpenJDK8U-jdk_x64_linux_hotspot_8u442b06.tar.gz && \
     dnf install -y rpm-build python36 && \
-    dnf install -y /root/ambari-server-3.0.0.0-SNAPSHOT.x86_64.rpm
+    dnf install -y /opt/${AMBARI_SERVER_RPM} && \
+    rm -f /opt/${AMBARI_SERVER_RPM}
+
 ENV JAVA_HOME=/usr/local/java
 ENV PATH=$JAVA_HOME/bin:$PATH
