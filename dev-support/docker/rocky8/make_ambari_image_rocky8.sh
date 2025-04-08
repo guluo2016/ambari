@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # Licensed to the Apache Software Foundation (ASF) under one or more
 # contributor license agreements.  See the NOTICE file distributed with
 # this work for additional information regarding copyright ownership.
@@ -15,23 +16,14 @@
 # limitations under the License.
 
 workdir=$(cd $(dirname $0); pwd)
+AMBARI_PROJECT_ROOT=$workdir/../../../
+AMBARI_VERSION=`awk -F '[<>]' '/<revision>/ {print $3; exit}' $AMBARI_PROJECT_ROOT/pom.xml`
 
-AMBARI_PROJECT_ROOT=$1
-AMBARI_VERSION=$2
+echo "Building ambari on rocky8"
+sh ./build_ambari_rocky8.sh ${AMBARI_PROJECT_ROOT} ${AMBARI_VERSION}
+echo "Building ambari server on rocky8 successfully"
 
-ambari_container_name=ambari_rocky8_build
-
-if [[ ! -z `docker ps -aq -f name=$ambari_container_name` ]];then
-    docker rm $ambari_container_name
-fi
-docker run -itd --name ambari_rocky8_build --network host -v ${AMBARI_PROJECT_ROOT}:/ambari --workdir /ambari ambari/trunk/rocky8_build
-
-docker exec ambari_rocky8_build sh -c 'mvn -B -T 2C clean install package rpm:rpm \
-    -Drat.skip=true \
-    -DskipTests \
-    -Dmaven.test.skip=true \
-    -Dfindbugs.skip=true \
-    -Dcheckstyle.skip=true'
-
-docker stop ambari_rocky8_build
-docker rm ambari_rocky8_build
+echo "Building ambari image on rocky8"
+ambari_server_rpm_path=${AMBARI_PROJECT_ROOT}/ambari-server/target/rpm/ambari-server/RPMS/x86_64/ambari-server-${AMBARI_VERSION}.x86_64.rpm
+docker build -t ambari:${AMBARI_VERSION}-rocky-8 -f $workdir/Dockerfile --build-arg AMABARI_SERVER_RPM_PATH=$ambari_server_rpm_path
+echo "Building ambari image on rocky8 successfully"

@@ -11,14 +11,16 @@
 #   limitations under the License.
 FROM rockylinux:8
 
-COPY $AMABARI_SERVER_RPM_PATH /root/
+# install openjdk17, maven, rpm-build, python3
 RUN curl -L -s -S https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.14%2B7/OpenJDK17U-jdk_x64_linux_hotspot_17.0.14_7.tar.gz  -o OpenJDK17U-jdk_x64_linux_hotspot_17.0.14_7.tar.gz && \
-    curl -L -s -S https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u442-b06/OpenJDK8U-jdk_x64_linux_hotspot_8u442b06.tar.gz -o OpenJDK8U-jdk_x64_linux_hotspot_8u442b06.tar.gz && \
+    curl -L -s -S  https://archive.apache.org/dist/maven/maven-3/3.9.8/binaries/apache-maven-3.9.8-bin.tar.gz  -o apache-maven-3.9.8-bin.tar.gz && \
     tar -xzf OpenJDK17U-jdk_x64_linux_hotspot_17.0.14_7.tar.gz -C /usr/local && \
-    tar -xzf OpenJDK8U-jdk_x64_linux_hotspot_8u442b06.tar.gz -C /usr/local && \
-    ln -s /usr/local/jdk8u442-b06 /usr/local/java && \
-    rm -f OpenJDK17U-jdk_x64_linux_hotspot_17.0.14_7.tar.gz OpenJDK8U-jdk_x64_linux_hotspot_8u442b06.tar.gz && \
-    dnf install -y rpm-build python36 && \
-    dnf install -y /root/ambari-server-3.0.0.0-SNAPSHOT.x86_64.rpm
+    tar -xzf apache-maven-3.9.8-bin.tar.gz -C /usr/local && \
+    ln -s /usr/local/jdk-17.0.14+7 /usr/local/java && \
+    ln -s /usr/local/apache-maven-3.9.8 /usr/local/maven && \
+    rm -f OpenJDK17U-jdk_x64_linux_hotspot_17.0.14_7.tar.gz apache-maven-3.9.8-bin.tar.gz && \
+    dnf install -y rpm-build python36
+
 ENV JAVA_HOME=/usr/local/java
-ENV PATH=$JAVA_HOME/bin:$PATH
+ENV MAVEN_HOME=/usr/local/maven
+ENV PATH=$JAVA_HOME/bin:$MAVEN_HOME/bin:$PATH
