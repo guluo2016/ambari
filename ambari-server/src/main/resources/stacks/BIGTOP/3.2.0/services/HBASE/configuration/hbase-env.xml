@@ -216,6 +216,9 @@ export HBASE_REGIONSERVERS=${HBASE_CONF_DIR}/regionservers
 # Where log files are stored. $HBASE_HOME/logs by default.
 export HBASE_LOG_DIR={{log_dir}}
 
+# Set the logging level and appender for the rootLogger
+export HBASE_ROOT_LOGGER={{hbase_log_level}},RFA
+
 # A string representing this instance of hbase. $USER by default.
 # export HBASE_IDENT_STRING=$USER
 

@@ -355,18 +355,11 @@ else:
   master_security_config = ""
   hbase_decommission_auth_config = ""
 
-# log4j.properties
-# HBase log4j settings
+# HBase log4j2.properties
 hbase_log_maxfilesize = default("configurations/hbase-log4j/hbase_log_maxfilesize", 256)
-hbase_log_maxbackupindex = default(
-  "configurations/hbase-log4j/hbase_log_maxbackupindex", 20
-)
-hbase_security_log_maxfilesize = default(
-  "configurations/hbase-log4j/hbase_security_log_maxfilesize", 256
-)
-hbase_security_log_maxbackupindex = default(
-  "configurations/hbase-log4j/hbase_security_log_maxbackupindex", 20
-)
+hbase_log_maxbackupindex = default("configurations/hbase-log4j/hbase_log_maxbackupindex", 20)
+hbase_security_log_maxfilesize = default("configurations/hbase-log4j/hbase_security_log_maxfilesize", 256)
+hbase_security_log_maxbackupindex = default("configurations/hbase-log4j/hbase_security_log_maxbackupindex", 20)
 
 if ("hbase-log4j" in config["configurations"]) and (
   "content" in config["configurations"]["hbase-log4j"]
